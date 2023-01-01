@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @settings_tag.title %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @settings_tag.color %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @settings_tag.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_settings_tag_path(@settings_tag) %> |
+<%= link_to 'Back', settings_tags_path %>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nejvic</title>
+    <%= csrf_meta_tags %>
+
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <strong> User:</strong>
+
+  </head>
+
+  <body>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <ul>
+  <li><%= link_to "Home",  home_index_path, :class => "header" %></li>
+  <li><%= link_to "Register",  new_user_registration_path, :class => "header" %></li>
+  <li><%= link_to "Log Out", destroy_user_session_path, method: :delete, :class => "header" %></li>
+    <li><%= link_to "Log In",   user_session_path , :class => "header" %></li>
+  <li><%= link_to "Edit Profile", edit_user_registration_path , :class => "header" %></li>
+
+
+  </ul>
+    <%= yield %>
+  </body>
+</html>
